@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 44" fill="none" role="img" aria-label="TOVELU - The Biospheric Arch">
   <!-- T: Original Biospheric Arch Lintel & Stem -->
-  <path d="M4 7.5H28 M16 7.5V36.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M4 7.5H28 M16 7.5V36.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
   <!-- O: Original Bio-Architectural Elliptical Ring -->
-  <ellipse cx="46" cy="22" rx="15" ry="14.5" stroke="currentColor" stroke-width="3"/>
+  <ellipse cx="46" cy="22" rx="15" ry="14.5" stroke="currentColor" stroke-width="2"/>
   <!-- V: Parabolic Catenary Keel Arch (Narrowed slightly from O) -->
-  <path d="M68.5 7.5C71.5 22 77.5 36.5 81.5 36.5C85.5 36.5 91.5 22 94.5 7.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M68.5 7.5C71.5 22 77.5 36.5 81.5 36.5C85.5 36.5 91.5 22 94.5 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
   <!-- E: Swept Organic Cantilevers (Exact original distance from V) -->
-  <path d="M123.5 7.5H104.5V36.5H123.5 M104.5 22H119.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M123.5 7.5H104.5V36.5H123.5 M104.5 22H119.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- L: Swept Internal Transition Heel (Exact original distance from E) -->
-  <path d="M133.5 7.5V33.5C133.5 35.5 135 36.5 137.5 36.5H153.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M133.5 7.5V33.5C133.5 35.5 135 36.5 137.5 36.5H153.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
   <!-- U: Catenary Suspension Bowl (Narrowed slightly from L foot) -->
-  <path d="M160.5 7.5V23C160.5 31 166 36.5 173 36.5C180 36.5 185.5 31 185.5 23V7.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M160.5 7.5V23C160.5 31 166 36.5 173 36.5C180 36.5 185.5 31 185.5 23V7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </svg>

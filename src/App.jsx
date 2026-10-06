@@ -8,14 +8,12 @@ import { CalmAlert } from './components/CalmAlert';
 import { AuditLedger } from './components/AuditLedger';
 import { BiometricVisualizer } from './components/BiometricVisualizer';
 import { ToveluWordmark } from './components/ToveluWordmark';
-import { StandaloneWordmarkStudio } from './components/StandaloneWordmarkStudio';
-import { ArchitecturalWordmarkStudio } from './components/ArchitecturalWordmarkStudio';
 
 export function App() {
   const [theme, setTheme] = useState('light');
   const [activeSimulation, setActiveSimulation] = useState('full'); // 'full' | 'tablet' | 'mobile'
   const [activeTab, setActiveTab] = useState('all'); // 'all' | 'identity' | 'health-graph' | 'sovereignty' | 'audit'
-  const [wordmarkStroke, setWordmarkStroke] = useState(2.8); // 2.2 | 2.8 | 3.4
+  const [wordmarkStroke, setWordmarkStroke] = useState(2.0); // Calibrated 1:1 with 2.0px icon branches and rings
   const [isActionLoading, setIsActionLoading] = useState(false);
   const [lastActionMessage, setLastActionMessage] = useState('');
 
@@ -581,7 +579,7 @@ export function App() {
               </div>
             </div>
 
-            {/* Integrated Logotype (Wordmark) Studio */}
+            {/* Canonical Locked Identity & Integrated Lockup System */}
             <div
               style={{
                 borderTop: '1px solid var(--border-subtle)',
@@ -605,55 +603,43 @@ export function App() {
                       letterSpacing: '0.06em',
                     }}
                   >
-                    <span>Typographic Architecture</span>
+                    <span>Locked Brand System</span>
                     <span>•</span>
-                    <span>Integrated Logotype</span>
+                    <span>1:1 Stroke Parity</span>
                   </div>
                   <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-bold)', marginTop: '0.2rem' }}>
-                    Icon-Harmonized Wordmark (`ToveluWordmark`)
+                    Canonical TOVELU Mark &amp; Wordmark Lockup
                   </h3>
                   <p style={{ fontSize: 'var(--font-size-sm)', color: 'var(--text-secondary)', marginTop: '0.1rem' }}>
-                    Typography engineered directly from the 5-node health graph DNA: rounded capsule stems, smooth semicircular terminals, and concentric circular curves.
+                    The official 5-node health graph icon paired with the Biospheric Arch wordmark. Stroke thickness calibrated to an exact 1:1 match with the 2.0px icon branches and rings.
                   </p>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
-                  <span style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-tertiary)' }}>Weight:</span>
-                  {[
-                    { val: 2.2, label: '2.2px (Branch)' },
-                    { val: 2.8, label: '2.8px (Optimal)' },
-                    { val: 3.5, label: '3.5px (Bold)' },
-                  ].map((w) => (
-                    <button
-                      key={w.val}
-                      type="button"
-                      onClick={() => setWordmarkStroke(w.val)}
-                      style={{
-                        padding: '0.2rem 0.55rem',
-                        borderRadius: 'var(--radius-sm)',
-                        fontSize: '11px',
-                        border: '1px solid',
-                        borderColor: wordmarkStroke === w.val ? 'var(--color-brand-primary)' : 'var(--border-subtle)',
-                        backgroundColor: wordmarkStroke === w.val ? 'var(--color-brand-subtle)' : 'var(--bg-surface-primary)',
-                        color: wordmarkStroke === w.val ? 'var(--color-brand-text)' : 'var(--text-secondary)',
-                        fontWeight: wordmarkStroke === w.val ? 'bold' : 'normal',
-                        cursor: 'pointer',
-                      }}
-                    >
-                      {w.label}
-                    </button>
-                  ))}
+                  <span
+                    style={{
+                      fontSize: 'var(--font-size-xs)',
+                      padding: '0.25rem 0.65rem',
+                      borderRadius: 'var(--radius-full)',
+                      backgroundColor: 'var(--health-verified-bg)',
+                      color: 'var(--health-verified-text)',
+                      border: '1px solid var(--health-verified-border)',
+                      fontWeight: 'var(--font-weight-semibold)',
+                    }}
+                  >
+                    ✓ Locked 2.0px Line Thickness
+                  </span>
                 </div>
               </div>
 
-              {/* Wordmark Live Display & Size Multi-Scale Grid */}
+              {/* Multi-Surface Identity Showcase */}
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
                   gap: 'var(--space-4)',
                 }}
               >
-                {/* Hero Size (56px) Light / Brand Surface */}
+                {/* Surface A: Light Mineral Canvas (AAA 14.8:1) */}
                 <div
                   style={{
                     backgroundColor: 'var(--bg-surface-sunken)',
@@ -664,17 +650,29 @@ export function App() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    gap: 'var(--space-3)',
+                    gap: 'var(--space-5)',
                     textAlign: 'center',
                   }}
                 >
-                  <ToveluWordmark height={52} color="var(--text-primary)" strokeWidth={wordmarkStroke} />
+                  <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-tertiary)', fontWeight: '600' }}>
+                    Primary Horizontal Lockup (Light Canvas)
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)' }}>
+                    <ToveluLogo size={44} color="var(--color-brand-primary)" />
+                    <div style={{ width: '1px', height: '30px', backgroundColor: 'var(--border-subtle)' }} />
+                    <ToveluWordmark height={36} color="var(--text-primary)" strokeWidth={2.0} />
+                  </div>
+                  <div style={{ width: '100%', height: '1px', backgroundColor: 'var(--border-subtle)' }} />
+                  <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-tertiary)', fontWeight: '600' }}>
+                    Standalone Wordmark (2.0px Stroke)
+                  </div>
+                  <ToveluWordmark height={46} color="var(--text-primary)" strokeWidth={2.0} />
                   <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-tertiary)' }}>
-                    Hero Display (52px height) • Active Stroke: <code>{wordmarkStroke}px</code>
+                    Light Mineral Surface • WCAG 2.2 AAA Contrast
                   </div>
                 </div>
 
-                {/* Inverted / Teal Brand Surface */}
+                {/* Surface B: Signature Clinical Teal Inverted Surface (#08615A) */}
                 <div
                   style={{
                     backgroundColor: '#08615A',
@@ -685,18 +683,35 @@ export function App() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    gap: 'var(--space-3)',
+                    gap: 'var(--space-5)',
                     textAlign: 'center',
                   }}
                 >
-                  <ToveluWordmark height={52} color="#ffffff" strokeWidth={wordmarkStroke} />
+                  <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#ccfbee', fontWeight: '600' }}>
+                    Primary Horizontal Lockup (Teal Canvas)
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)' }}>
+                    <ToveluLogo size={44} color="#5EEAD4" />
+                    <div style={{ width: '1px', height: '30px', backgroundColor: 'rgba(255,255,255,0.2)' }} />
+                    <ToveluWordmark height={36} color="#ffffff" strokeWidth={2.0} />
+                  </div>
+                  <div style={{ width: '100%', height: '1px', backgroundColor: 'rgba(255,255,255,0.15)' }} />
+                  <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#ccfbee', fontWeight: '600' }}>
+                    Stacked System Tile Lockup
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--space-3)' }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '22%', backgroundColor: '#095c51', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <ToveluLogo size={34} color="#5EEAD4" />
+                    </div>
+                    <ToveluWordmark height={30} color="#ffffff" strokeWidth={2.0} />
+                  </div>
                   <div style={{ fontSize: 'var(--font-size-xs)', color: '#ccfbee' }}>
                     Signature Teal Canvas (#08615A) • 11.2:1 AAA Contrast
                   </div>
                 </div>
               </div>
 
-              {/* Typographic Blueprint Specifications */}
+              {/* Mathematical Calibration Specifications */}
               <div
                 style={{
                   display: 'grid',
@@ -706,36 +721,30 @@ export function App() {
                 }}
               >
                 <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>1. CAPSULE STEM DNA</div>
-                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Rounded Pill Terminals</div>
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Every stem ends in a semicircular cap, matching the icon's branches</div>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>1. 1:1 STROKE PARITY</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Uniform 2.0px Line Weight</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Wordmark strokes match the 2.0px branch capsules and nucleus ring walls</div>
                 </div>
 
                 <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>2. CONCENTRIC CIRCULARITY</div>
-                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Concentric 'U' &amp; Corner Joins</div>
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>R=9.5px smooth bowl in 'U' mirrors the central hub and terminal nodes</div>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>2. CALIBRATED KERNING</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Balanced Optical Flow</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Subtle narrowing on O-V (7.5px) and L-U (7.0px); V-E (10px) and E-L (10px) intact</div>
                 </div>
 
                 <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>3. EQUATORIAL ALIGNMENT</div>
-                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Horizontal Axis at Y=24</div>
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Middle arm of 'E' aligns with the icon's central nucleus ring at Y=24</div>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>3. BIOSPHERIC ARCH GEOMETRY</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Load-Bearing Catenary Curves</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Smooth catenary keel arch on 'V', swept heel on 'L', suspension bowl on 'U'</div>
                 </div>
 
                 <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>4. PURE VECTOR SVG</div>
-                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Zero Font Dependencies</div>
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}><code>public/tovelu_wordmark.svg</code> • Indivisible responsive vector</div>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>4. PURE PRODUCTION ASSETS</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Canonical Standalone SVGs</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}><code>ToveluLogo.jsx</code> &amp; <code>ToveluWordmark.jsx</code> • Zero external dependencies</div>
                 </div>
               </div>
             </div>
-
-            {/* Standalone Wordmark Studio: 5 Distinct Concepts */}
-            <StandaloneWordmarkStudio />
-
-            {/* Architectural Monoline Evolutions: 5 Bespoke Planetary Concepts */}
-            <ArchitecturalWordmarkStudio />
           </section>
         )}
 

@@ -1,22 +1,23 @@
 import React from 'react';
 
 /**
- * ToveluWordmark - The Biospheric Arch (Organic Structuralism)
+ * ToveluWordmark - The Canonical Biospheric Arch Wordmark
  * 
- * Chosen Direction: Concept 4 - The Biospheric Arch
- * Calibrated with Equalized Narrow Kerning:
- * - T -> O: 3.5px
- * - O -> V: 3.5px (narrowed from 11px to match T-O)
- * - V -> E: 4.0px
- * - E -> L: 4.0px
- * - L -> U: 3.5px (narrowed from 10px by tucking U over L's foot)
+ * Locked Brand Direction: Concept 4 - The Biospheric Arch
+ * Mathematically calibrated stroke thickness: 2.0px
+ * Exactly identical to the 2.0px stroke thickness of the canonical ToveluLogo icon branches and rings.
  * 
- * All letter-to-letter distances are completely equal and optically balanced.
+ * Optical Kerning Calibration:
+ * - T -> O: Preserved authentic spacing
+ * - O -> V: 7.5px (subtly narrowed from 11px)
+ * - V -> E: 10.0px (strictly identical to original)
+ * - E -> L: 10.0px (strictly identical to original)
+ * - L -> U: 7.0px (subtly narrowed from 10px)
  */
 export function ToveluWordmark({
   height = 36,
   color = 'currentColor',
-  strokeWidth = 3.0,
+  strokeWidth = 2.0, // Calibrated 1:1 with ToveluLogo 2.0px branch & ring thickness
   className = '',
   ariaLabel = 'TOVELU - Global Digital Health Operating System',
   ...props
