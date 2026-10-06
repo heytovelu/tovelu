@@ -13,6 +13,7 @@ export function App() {
   const [theme, setTheme] = useState('light');
   const [activeSimulation, setActiveSimulation] = useState('full'); // 'full' | 'tablet' | 'mobile'
   const [activeTab, setActiveTab] = useState('all'); // 'all' | 'identity' | 'health-graph' | 'sovereignty' | 'audit'
+  const [wordmarkStroke, setWordmarkStroke] = useState(2.8); // 2.2 | 2.8 | 3.4
   const [isActionLoading, setIsActionLoading] = useState(false);
   const [lastActionMessage, setLastActionMessage] = useState('');
 
@@ -105,7 +106,7 @@ export function App() {
                   <span>GLOBAL DIGITAL HEALTH ECOSYSTEM</span>
                 </div>
                 <div style={{ marginTop: 'var(--space-1)', marginBottom: 'var(--space-2)' }}>
-                  <ToveluWordmark height={36} color="var(--text-primary)" />
+                  <ToveluWordmark height={36} color="var(--text-primary)" strokeWidth={wordmarkStroke} />
                 </div>
                 <h1
                   style={{
@@ -607,25 +608,39 @@ export function App() {
                     <span>Integrated Logotype</span>
                   </div>
                   <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-bold)', marginTop: '0.2rem' }}>
-                    Official TOVELU Wordmark (`ToveluWordmark`)
+                    Icon-Harmonized Wordmark (`ToveluWordmark`)
                   </h3>
                   <p style={{ fontSize: 'var(--font-size-sm)', color: 'var(--text-secondary)', marginTop: '0.1rem' }}>
-                    Seamless integration where 'O' is replaced by the official 5-node health graph. Engineered with +2.5% optical overshoot and calibrated kerning.
+                    Typography engineered directly from the 5-node health graph DNA: rounded capsule stems, smooth semicircular terminals, and concentric circular curves.
                   </p>
                 </div>
-                <span
-                  style={{
-                    fontSize: 'var(--font-size-xs)',
-                    padding: '0.2rem 0.65rem',
-                    borderRadius: 'var(--radius-full)',
-                    backgroundColor: 'var(--health-calm-bg)',
-                    color: 'var(--health-calm-text)',
-                    border: '1px solid var(--health-calm-border)',
-                    fontWeight: 'var(--font-weight-semibold)',
-                  }}
-                >
-                  WCAG 2.2 AAA Contrast
-                </span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
+                  <span style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-tertiary)' }}>Weight:</span>
+                  {[
+                    { val: 2.2, label: '2.2px (Branch)' },
+                    { val: 2.8, label: '2.8px (Optimal)' },
+                    { val: 3.5, label: '3.5px (Bold)' },
+                  ].map((w) => (
+                    <button
+                      key={w.val}
+                      type="button"
+                      onClick={() => setWordmarkStroke(w.val)}
+                      style={{
+                        padding: '0.2rem 0.55rem',
+                        borderRadius: 'var(--radius-sm)',
+                        fontSize: '11px',
+                        border: '1px solid',
+                        borderColor: wordmarkStroke === w.val ? 'var(--color-brand-primary)' : 'var(--border-subtle)',
+                        backgroundColor: wordmarkStroke === w.val ? 'var(--color-brand-subtle)' : 'var(--bg-surface-primary)',
+                        color: wordmarkStroke === w.val ? 'var(--color-brand-text)' : 'var(--text-secondary)',
+                        fontWeight: wordmarkStroke === w.val ? 'bold' : 'normal',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      {w.label}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {/* Wordmark Live Display & Size Multi-Scale Grid */}
@@ -651,9 +666,9 @@ export function App() {
                     textAlign: 'center',
                   }}
                 >
-                  <ToveluWordmark height={52} color="var(--text-primary)" />
+                  <ToveluWordmark height={52} color="var(--text-primary)" strokeWidth={wordmarkStroke} />
                   <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-tertiary)' }}>
-                    Hero Display (52px height) • Adaptive <code>currentColor</code>
+                    Hero Display (52px height) • Active Stroke: <code>{wordmarkStroke}px</code>
                   </div>
                 </div>
 
@@ -672,7 +687,7 @@ export function App() {
                     textAlign: 'center',
                   }}
                 >
-                  <ToveluWordmark height={52} color="#ffffff" />
+                  <ToveluWordmark height={52} color="#ffffff" strokeWidth={wordmarkStroke} />
                   <div style={{ fontSize: 'var(--font-size-xs)', color: '#ccfbee' }}>
                     Signature Teal Canvas (#08615A) • 11.2:1 AAA Contrast
                   </div>
@@ -689,27 +704,27 @@ export function App() {
                 }}
               >
                 <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>1. PRIMARY FONT PAIRING</div>
-                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Geometric Sans (Inter SemiBold)</div>
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Cap Height: 32px | Uniform stroke: 4.5px | Tracking: +0.02em</div>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>1. CAPSULE STEM DNA</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Rounded Pill Terminals</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Every stem ends in a semicircular cap, matching the icon's branches</div>
                 </div>
 
                 <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>2. INTEGRATION OVERSHOOT</div>
-                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>+2.5% Cap &amp; +2.5% Baseline</div>
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Scale factor s=0.93075 | Height: 33.6px | Y: 7.2 to 40.8</div>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>2. CONCENTRIC CIRCULARITY</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Concentric 'U' &amp; Corner Joins</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>R=9.5px smooth bowl in 'U' mirrors the central hub and terminal nodes</div>
                 </div>
 
                 <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>3. CALIBRATED KERNING</div>
-                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Tucked T-O &amp; Angled O-V</div>
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Icon tucks 1.5px under T arm; 6.2px gap to V diagonal</div>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>3. EQUATORIAL ALIGNMENT</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Horizontal Axis at Y=24</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Middle arm of 'E' aligns with the icon's central nucleus ring at Y=24</div>
                 </div>
 
                 <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>4. SINGLE ASSET EMBED</div>
-                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Pure Vector SVG (178x48)</div>
-                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}><code>public/tovelu_wordmark.svg</code> • Zero font dependencies</div>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>4. PURE VECTOR SVG</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Zero Font Dependencies</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}><code>public/tovelu_wordmark.svg</code> • Indivisible responsive vector</div>
                 </div>
               </div>
             </div>

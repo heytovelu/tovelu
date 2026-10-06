@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 48" fill="none" role="img" aria-label="TOVELU - Global Digital Health Operating System">
-  <!-- T -->
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8H25.5V12.4H16V40H11.5V12.4H2V8Z" fill="currentColor"/>
-  <!-- Integrated 'O' Logo Icon (2.5% optical overshoot, s=0.93075) -->
-  <g transform="matrix(0.93075 0 0 0.93075 19.0 2.64)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198 48" fill="none" role="img" aria-label="TOVELU - Global Digital Health Operating System">
+  <!-- GLYPH 1: T (Rounded Capsule Geometry) -->
+  <path d="M5 8.5H25.5 M15.25 8.5V38.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- GLYPH 2: INTEGRATED 'O' (Official TOVELU 5-Node Health Graph Icon) -->
+  <g transform="translate(27, 0)">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9398 22.3417C17.7511 22.8608 17.1773 23.1285 16.6583 22.9398L11.1583 20.9398C10.6392 20.7511 10.3715 20.1773 10.5602 19.6583C10.7489 19.1392 11.3227 18.8715 11.8417 19.0602L17.3417 21.0602C17.8608 21.2489 18.1285 21.8227 17.9398 22.3417Z" fill="currentColor"/>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M37.4285 19.6286C37.6336 20.1414 37.3842 20.7234 36.8714 20.9285L31.8714 22.9285C31.3586 23.1336 30.7766 22.8842 30.5715 22.3714C30.3664 21.8586 30.6158 21.2766 31.1286 21.0715L36.1286 19.0715C36.6414 18.8664 37.2234 19.1158 37.4285 19.6286Z" fill="currentColor"/>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0882 29.6913C20.5348 30.0161 20.6336 30.6415 20.3087 31.0882L16.3087 36.5882C15.9839 37.0348 15.3585 37.1336 14.9118 36.8087C14.4652 36.4839 14.3664 35.8585 14.6913 35.4118L18.6913 29.9118C19.0161 29.4652 19.6415 29.3664 20.0882 29.6913Z" fill="currentColor"/>
@@ -15,12 +16,16 @@
     <path fill-rule="evenodd" clip-rule="evenodd" d="M34 39C34.5523 39 35 38.5523 35 38C35 37.4477 34.5523 37 34 37C33.4477 37 33 37.4477 33 38C33 38.5523 33.4477 39 34 39ZM34 41C35.6569 41 37 39.6569 37 38C37 36.3431 35.6569 35 34 35C32.3431 35 31 36.3431 31 38C31 39.6569 32.3431 41 34 41Z" fill="currentColor"/>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M9 20C9.55228 20 10 19.5523 10 19C10 18.4477 9.55228 18 9 18C8.44772 18 8 18.4477 8 19C8 19.5523 8.44772 20 9 20ZM9 22C10.6569 22 12 20.6569 12 19C12 17.3431 10.6569 16 9 16C7.34315 16 6 17.3431 6 19C6 20.6569 7.34315 22 9 22Z" fill="currentColor"/>
   </g>
-  <!-- V -->
-  <path d="M64 8H68.6L75.8 33.8L83.0 8H87.6L78 40H73.5L64 8Z" fill="currentColor"/>
-  <!-- E -->
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M94.5 8H115.5V12.4H99V21.8H113V26.2H99V35.6H115.5V40H94.5V8Z" fill="currentColor"/>
-  <!-- L -->
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M122.5 8H127V35.6H142.5V40H122.5V8Z" fill="currentColor"/>
-  <!-- U -->
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M149 8H153.5V27.5C153.5 31.8 156.9 35.6 161.25 35.6C165.6 35.6 169 31.8 169 27.5V8H173.5V27.5C173.5 34.4 168.0 40 161.25 40C154.5 40 149 34.4 149 27.5V8Z" fill="currentColor"/>
+  
+  <!-- GLYPH 3: V (Rounded Apex & Terminals) -->
+  <path d="M77 8.5L88 38.5L99 8.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- GLYPH 4: E (Rounded Arms & Equator Alignment) -->
+  <path d="M125 8.5H108V38.5H125 M108 23.5H122" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- GLYPH 5: L (Rounded Stem & Base Corner) -->
+  <path d="M135 8.5V38.5H152" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- GLYPH 6: U (Concentric Horseshoe Curve) -->
+  <path d="M162 8.5V28.5C162 34 166.25 38.5 171.5 38.5C176.75 38.5 181 34 181 28.5V8.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

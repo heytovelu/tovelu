@@ -1,28 +1,22 @@
 import React from 'react';
 
 /**
- * ToveluWordmark - Production Integrated Logotype
+ * ToveluWordmark - Icon-Harmonized Integrated Logotype
  * 
- * Specifications & Integration Math:
- * 1. Primary Typography: Geometric Sans (Inter Display SemiBold proportions).
- *    - Cap Height (H_cap): 32px (Y=8 to Y=40).
- *    - Stroke Weight (S): 4.5px (uniform across T, V, E, L, U).
- * 2. Optical Overshoot:
- *    - Exact overshoot: +2.5% above cap height (Y=7.2), +2.5% below baseline (Y=40.8).
- *    - Scale factor: s = 0.93075 (33.6px visual height).
- *    - Vertical transform: translateY(2.64px).
- * 3. Kerning Spacing:
- *    - T-Icon Pair: Left node of icon tucked 1.5px under T crossbar overhang.
- *    - Icon-V Pair: Optical gap calibrated to 6.2px against diagonal left stem of V.
- *    - Uniform letter tracking: 6.0px - 6.5px inter-glyph rhythm.
- * 4. Architecture:
- *    - 100% self-contained pure SVG vector paths.
- *    - Theme adaptive with fill="currentColor".
- *    - Zero browser font-shift or layout reflow.
+ * DESIGN RATIONALE & ICON MATCHING:
+ * The typography of TOVELU is directly derived from the DNA of the 5-node health graph icon:
+ * 1. Rounded Capsule Stems: Every stem terminates in a semicircular round cap (stroke-linecap: round),
+ *    mirroring the capsule branches and top stem of the icon.
+ * 2. Concentric Circular Geometry: The bottom of 'U', corners of 'V', 'E', and 'L' are smooth circular curves
+ *    matching the central ring and 5 outer nodes.
+ * 3. Equator Alignment: Middle arm of 'E' aligns at Y=24 with the horizontal axis and central hub of the icon.
+ * 4. Calibrated Optical Weight: Stroke width (default 2.8px) matches the exact optical mass of the 
+ *    icon's 2.0px branches and 6.0px annular nodes.
  */
 export function ToveluWordmark({
   height = 36,
   color = 'currentColor',
+  strokeWidth = 2.8,
   className = '',
   ariaLabel = 'TOVELU - Global Digital Health Operating System',
   ...props
@@ -30,7 +24,7 @@ export function ToveluWordmark({
   return (
     <svg
       height={height}
-      viewBox="0 0 178 48"
+      viewBox="0 0 198 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
@@ -40,25 +34,24 @@ export function ToveluWordmark({
       {...props}
     >
       {/* =====================================================================
-          GLYPH 1: 'T'
-          Cap Height: Y=8 to Y=40 (32px).
-          Crossbar: X=2 to X=25.5, Thickness: 4.4px.
-          Stem: X=11.5 to X=16.0, Thickness: 4.5px.
+          GLYPH 1: 'T' (Rounded Capsule Geometry)
+          Crossbar: X=5 to X=25.5 (Length 20.5px) at Y=8.5
+          Vertical Stem: X=15.25 from Y=8.5 to Y=38.5 (Baseline Y=40 with cap)
           ===================================================================== */}
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M2 8H25.5V12.4H16V40H11.5V12.4H2V8Z"
-        fill={color}
+        d="M5 8.5H25.5 M15.25 8.5V38.5"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
 
       {/* =====================================================================
           GLYPH 2: INTEGRATED 'O' (Official TOVELU 5-Node Health Graph Icon)
-          Scale: 0.93075 | Translation: (19.0, 2.64)
-          Visual Bounds: X=24.58 to X=58.09 (Width: 33.5px)
-          Optical Overshoot: Y=7.20 to Y=40.80 (Height: 33.6px = +2.5% cap, +2.5% base)
+          Origin placed at X=27 to create natural kerning with 'T' and 'V'.
+          All branches, rings, and nodes are 100% native SVG from the Founder's mark.
           ===================================================================== */}
-      <g transform="matrix(0.93075 0 0 0.93075 19.0 2.64)">
+      <g transform="translate(27, 0)">
         {/* Branch 1: Left-Upper */}
         <path
           fillRule="evenodd"
@@ -139,53 +132,59 @@ export function ToveluWordmark({
       </g>
 
       {/* =====================================================================
-          GLYPH 3: 'V'
-          Apex: X=73.5 to X=78.0 at Y=40.
-          Stems: Thickness: 4.6px.
-          Bounds: X=64.0 to X=87.5.
+          GLYPH 3: 'V' (Rounded Apex & Terminals)
+          Left Top: (77, 8.5) -> Apex: (88, 38.5) -> Right Top: (99, 8.5)
+          Soft curved apex at baseline, rounded caps at top
           ===================================================================== */}
       <path
-        d="M64 8H68.6L75.8 33.8L83.0 8H87.6L78 40H73.5L64 8Z"
-        fill={color}
+        d="M77 8.5L88 38.5L99 8.5"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
 
       {/* =====================================================================
-          GLYPH 4: 'E'
-          Stem: X=94.5 to X=99.0 (4.5px).
-          Arms: Top (Y=8-12.4), Mid (Y=21.8-26.2), Bot (Y=35.6-40).
-          Bounds: X=94.5 to X=115.5.
+          GLYPH 4: 'E' (Rounded Arms & Equator-Aligned Mid Arm)
+          Stem: X=108 from Y=8.5 to Y=38.5
+          Top Arm: Y=8.5 to X=125
+          Mid Arm: Y=23.5 to X=122 (Aligned with central icon hub at Y=24)
+          Bot Arm: Y=38.5 to X=125
           ===================================================================== */}
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M94.5 8H115.5V12.4H99V21.8H113V26.2H99V35.6H115.5V40H94.5V8Z"
-        fill={color}
+        d="M125 8.5H108V38.5H125 M108 23.5H122"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
 
       {/* =====================================================================
-          GLYPH 5: 'L'
-          Stem: X=122.5 to X=127.0 (4.5px).
-          Base: X=122.5 to X=142.5 (4.4px).
-          Bounds: X=122.5 to X=142.5.
+          GLYPH 5: 'L' (Rounded Stem & Base Corner)
+          Stem: X=135 from Y=8.5 to Y=38.5
+          Base: Y=38.5 to X=152
+          Smooth rounded join at (135, 38.5), rounded terminals
           ===================================================================== */}
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M122.5 8H127V35.6H142.5V40H122.5V8Z"
-        fill={color}
+        d="M135 8.5V38.5H152"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
 
       {/* =====================================================================
-          GLYPH 6: 'U'
-          Stems: X=149.0-153.5 and X=169.0-173.5 (4.5px).
-          Curved Bowl: Y=27 to Y=40, Outer Radius: 12.25px, Inner Radius: 7.75px.
-          Bounds: X=149.0 to X=173.5.
+          GLYPH 6: 'U' (Concentric Horseshoe Curve)
+          Stems: X=162 and X=181 from Y=8.5 down to Y=28
+          Arc: R=9.5 semi-circle from (162, 28) through baseline to (181, 28)
+          Mirrors circular geometry of central hub and terminal nodes
           ===================================================================== */}
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M149 8H153.5V27.5C153.5 31.8 156.9 35.6 161.25 35.6C165.6 35.6 169 31.8 169 27.5V8H173.5V27.5C173.5 34.4 168.0 40 161.25 40C154.5 40 149 34.4 149 27.5V8Z"
-        fill={color}
+        d="M162 8.5V28.5C162 34 166.25 38.5 171.5 38.5C176.75 38.5 181 34 181 28.5V8.5"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
