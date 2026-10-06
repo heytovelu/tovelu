@@ -8,6 +8,7 @@ import { CalmAlert } from './components/CalmAlert';
 import { AuditLedger } from './components/AuditLedger';
 import { BiometricVisualizer } from './components/BiometricVisualizer';
 import { ToveluWordmark } from './components/ToveluWordmark';
+import { StandaloneWordmarkStudio } from './components/StandaloneWordmarkStudio';
 
 export function App() {
   const [theme, setTheme] = useState('light');
@@ -728,6 +729,9 @@ export function App() {
                 </div>
               </div>
             </div>
+
+            {/* Standalone Wordmark Studio: 5 Distinct Concepts */}
+            <StandaloneWordmarkStudio />
           </section>
         )}
 
