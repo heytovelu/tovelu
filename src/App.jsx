@@ -9,6 +9,7 @@ import { AuditLedger } from './components/AuditLedger';
 import { BiometricVisualizer } from './components/BiometricVisualizer';
 import { ToveluWordmark } from './components/ToveluWordmark';
 import { StandaloneWordmarkStudio } from './components/StandaloneWordmarkStudio';
+import { ArchitecturalWordmarkStudio } from './components/ArchitecturalWordmarkStudio';
 
 export function App() {
   const [theme, setTheme] = useState('light');
@@ -732,6 +733,9 @@ export function App() {
 
             {/* Standalone Wordmark Studio: 5 Distinct Concepts */}
             <StandaloneWordmarkStudio />
+
+            {/* Architectural Monoline Evolutions: 5 Bespoke Planetary Concepts */}
+            <ArchitecturalWordmarkStudio />
           </section>
         )}
 
