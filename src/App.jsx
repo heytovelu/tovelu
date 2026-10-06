@@ -8,6 +8,7 @@ import { CalmAlert } from './components/CalmAlert';
 import { AuditLedger } from './components/AuditLedger';
 import { BiometricVisualizer } from './components/BiometricVisualizer';
 import { ToveluWordmark } from './components/ToveluWordmark';
+import { BrandKitDownloadHub } from './components/BrandKitDownloadHub';
 
 export function App() {
   const [theme, setTheme] = useState('light');
@@ -132,7 +133,7 @@ export function App() {
               </div>
             </div>
 
-            {/* Quick Actions: Theme */}
+            {/* Quick Actions: Brand Kit Download & Theme */}
             <div
               style={{
                 display: 'flex',
@@ -141,6 +142,29 @@ export function App() {
                 flexWrap: 'wrap',
               }}
             >
+              <a
+                href="/tovelu-brand-kit.zip"
+                download="tovelu-brand-kit.zip"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  backgroundColor: 'var(--color-brand-primary)',
+                  color: '#ffffff',
+                  padding: '0.45rem 0.85rem',
+                  borderRadius: 'var(--radius-sm)',
+                  fontSize: 'var(--font-size-xs)',
+                  fontWeight: 'var(--font-weight-bold)',
+                  textDecoration: 'none',
+                  boxShadow: 'var(--shadow-sm)',
+                  cursor: 'pointer',
+                  minHeight: '36px',
+                }}
+              >
+                <span>📦</span>
+                <span>Download Kit (.ZIP)</span>
+              </a>
+
               <ActionButton
                 variant="secondary"
                 size="sm"
@@ -226,6 +250,7 @@ export function App() {
               {[
                 { id: 'all', label: 'All Modules' },
                 { id: 'identity', label: 'Canonical Mark' },
+                { id: 'downloads', label: '📦 Brand Kit (.ZIP)' },
                 { id: 'health-graph', label: 'Biometrics & Care' },
                 { id: 'sovereignty', label: 'Consent Vault' },
                 { id: 'audit', label: 'Audit Ledger' },
@@ -741,6 +766,13 @@ export function App() {
               </div>
             </div>
           </section>
+        )}
+
+        {/* =========================================================================
+            MARKETING & BRAND ASSET DOWNLOAD SUITE
+            ========================================================================= */}
+        {(activeTab === 'all' || activeTab === 'identity' || activeTab === 'downloads') && (
+          <BrandKitDownloadHub />
         )}
 
         {/* =========================================================================
