@@ -24,7 +24,7 @@ export function ToveluWordmark({
   return (
     <svg
       height={height}
-      viewBox="0 0 158 44"
+      viewBox="0 0 194 44"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
@@ -34,71 +34,53 @@ export function ToveluWordmark({
       {...props}
     >
       {/* =====================================================================
-          GLYPH 1: 'T'
-          Crossbar: X=4 to X=26 (Width 22px) at Y=7.5
-          Vertical Stem: X=15 from Y=7.5 to Y=36.5
-          Gusset fillet micro-transitions
+          GLYPH 1: 'T' (Original Biospheric Arch Lintel & Stem)
+          Crossbar: X=4 to X=28 (Width 24px) at Y=7.5
+          Vertical Stem: X=16 from Y=7.5 to Y=36.5
           ===================================================================== */}
       <path
-        d="M4 7.5H26 M15 7.5V36.5"
+        d="M4 7.5H28 M16 7.5V36.5"
         stroke={color}
         strokeWidth={strokeWidth}
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
 
       {/* =====================================================================
-          GLYPH 2: 'O' (Biospheric Arch Ring)
-          Center: (40.5, 22), Rx=14.5, Ry=14.5
-          Left Edge: X=26 + 3.5 = 29.5
-          Right Edge: X=55.0
-          Gap from T: Exactly 3.5px
+          GLYPH 2: 'O' (Original Bio-Architectural Elliptical Ring)
+          Center: (46, 22), Rx=15, Ry=14.5
+          Span: X=31 to X=61 (Width 30px)
+          Spacing from T: Exactly as original
           ===================================================================== */}
-      <circle
-        cx="41.5"
+      <ellipse
+        cx="46"
         cy="22"
-        r="14.5"
+        rx="15"
+        ry="14.5"
         stroke={color}
         strokeWidth={strokeWidth}
       />
 
       {/* =====================================================================
-          GLYPH 3: 'V' (Parabolic Catenary Keel Arch)
-          Left Top starts at X=59.5 (Gap from O = 59.5 - 56.0 = 3.5px!)
-          Apex curves at (70.5, 36.5)
-          Right Top ends at X=81.5
-          Parabolic smooth sweep eliminates acute needle point
+          GLYPH 3: 'V' (Original Parabolic Catenary Keel Arch)
+          Narrowed slightly from O (from 11px down to 7.5px gap)
+          Starts at X=68.5, Apex at X=81.5, Ends at X=94.5
+          Original width: 26px
           ===================================================================== */}
       <path
-        d="M59.5 7.5C62.5 21 67.5 36.5 70.5 36.5C73.5 36.5 78.5 21 81.5 7.5"
-        stroke={color}
-        strokeWidth={strokeWidth}
-        strokeLinecap="round"
-      />
-
-      {/* =====================================================================
-          GLYPH 4: 'E' (Cantilever Beams with Fillets)
-          Vertical Stem starts at X=85.5 (Gap from V = 85.5 - 81.5 = 4.0px!)
-          Top Arm: Y=7.5 to X=103.5 (18px)
-          Mid Arm: Y=22 to X=99.5 (14px)
-          Bot Arm: Y=36.5 to X=103.5 (18px)
-          ===================================================================== */}
-      <path
-        d="M103.5 7.5H85.5V36.5H103.5 M85.5 22H99.5"
+        d="M68.5 7.5C71.5 22 77.5 36.5 81.5 36.5C85.5 36.5 91.5 22 94.5 7.5"
         stroke={color}
         strokeWidth={strokeWidth}
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
 
       {/* =====================================================================
-          GLYPH 5: 'L' (Swept Internal Transition)
-          Vertical Stem starts at X=107.5 (Gap from E = 107.5 - 103.5 = 4.0px!)
-          Swept transition curve at heel into baseline foot
-          Foot ends at X=123.5 (Length 16px)
+          GLYPH 4: 'E' (Original Swept Organic Cantilevers)
+          Distance from V: Exactly original (10px gap: 94.5 -> 104.5)
+          Vertical Stem at X=104.5, Top/Bottom Arms end at X=123.5, Mid at 119.5
+          Original width: 19px
           ===================================================================== */}
       <path
-        d="M107.5 7.5V33.5C107.5 35.5 109 36.5 111.5 36.5H123.5"
+        d="M123.5 7.5H104.5V36.5H123.5 M104.5 22H119.5"
         stroke={color}
         strokeWidth={strokeWidth}
         strokeLinecap="round"
@@ -106,17 +88,29 @@ export function ToveluWordmark({
       />
 
       {/* =====================================================================
-          GLYPH 6: 'U' (Catenary Suspension Bowl)
-          Left Stem starts at X=127.0 (Gap from L foot = 127.0 - 123.5 = 3.5px!)
-          Tucked over L foot so L-U distance is completely equal to all other pairs!
-          Bowl sweeps from (127.0, 23) through (138.0, 36.5) up to X=149.0
+          GLYPH 5: 'L' (Original Swept Internal Transition Heel)
+          Distance from E: Exactly original (10px gap: 123.5 -> 133.5)
+          Vertical Stem at X=133.5, Baseline Foot ends at X=153.5
+          Original width: 20px
           ===================================================================== */}
       <path
-        d="M127 7.5V23C127 31 132 36.5 138 36.5C144 36.5 149 31 149 23V7.5"
+        d="M133.5 7.5V33.5C133.5 35.5 135 36.5 137.5 36.5H153.5"
         stroke={color}
         strokeWidth={strokeWidth}
         strokeLinecap="round"
-        strokeLinejoin="round"
+      />
+
+      {/* =====================================================================
+          GLYPH 6: 'U' (Original Catenary Suspension Bowl)
+          Narrowed slightly from L (from 10px down to 7.0px gap at foot)
+          Left Stem at X=160.5, Center Apex at X=173, Right Stem at X=185.5
+          Original width: 25px
+          ===================================================================== */}
+      <path
+        d="M160.5 7.5V23C160.5 31 166 36.5 173 36.5C180 36.5 185.5 31 185.5 23V7.5"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
       />
     </svg>
   );

@@ -74,21 +74,21 @@ export function ArchitecturalWordmarkSVG({ concept = 'geodesic', height = 36, co
   }
 
   if (concept === 'biospheric') {
-    // 4. The Biospheric Arch: Organic structuralism with Calibrated Equalized Narrow Kerning
+    // 4. The Biospheric Arch: Organic structuralism with subtle narrow kerning on O-V and L-U
     return (
-      <svg height={height} viewBox="0 0 158 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TOVELU Biospheric Arch (Equalized Kerning)">
-        {/* T: 22px Lintel with Micro-Fillets */}
-        <path d="M4 7.5H26 M15 7.5V36.5" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
-        {/* O: Biospheric Arch Ring (Gap: 3.5px from T) */}
-        <circle cx="41.5" cy="22" r="14.5" stroke={color} strokeWidth="3.0"/>
-        {/* V: Parabolic Catenary Keel Arch (Gap: 3.5px from O) */}
-        <path d="M59.5 7.5C62.5 21 67.5 36.5 70.5 36.5C73.5 36.5 78.5 21 81.5 7.5" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
-        {/* E: Cantilever Beams (Gap: 4.0px from V) */}
-        <path d="M103.5 7.5H85.5V36.5H103.5 M85.5 22H99.5" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
-        {/* L: Swept Transition Heel (Gap: 4.0px from E) */}
-        <path d="M107.5 7.5V33.5C107.5 35.5 109 36.5 111.5 36.5H123.5" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
-        {/* U: Catenary Suspension Bowl (Gap: 3.5px from L foot) */}
-        <path d="M127 7.5V23C127 31 132 36.5 138 36.5C144 36.5 149 31 149 23V7.5" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg height={height} viewBox="0 0 194 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TOVELU Biospheric Arch">
+        {/* T: Original Biospheric Arch Lintel & Stem */}
+        <path d="M4 7.5H28 M16 7.5V36.5" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
+        {/* O: Original Bio-Architectural Elliptical Ring */}
+        <ellipse cx="46" cy="22" rx="15" ry="14.5" stroke={color} strokeWidth="3.0"/>
+        {/* V: Parabolic Catenary Keel Arch (Narrowed slightly from O) */}
+        <path d="M68.5 7.5C71.5 22 77.5 36.5 81.5 36.5C85.5 36.5 91.5 22 94.5 7.5" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
+        {/* E: Swept Organic Cantilevers (Exact original distance from V) */}
+        <path d="M123.5 7.5H104.5V36.5H123.5 M104.5 22H119.5" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
+        {/* L: Swept Internal Transition Heel (Exact original distance from E) */}
+        <path d="M133.5 7.5V33.5C133.5 35.5 135 36.5 137.5 36.5H153.5" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
+        {/* U: Catenary Suspension Bowl (Narrowed slightly from L foot) */}
+        <path d="M160.5 7.5V23C160.5 31 166 36.5 173 36.5C180 36.5 185.5 31 185.5 23V7.5" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
       </svg>
     );
   }
@@ -120,13 +120,13 @@ export function ArchitecturalWordmarkStudio() {
     {
       id: 'biospheric',
       name: '4. The Biospheric Arch (Chosen)',
-      subtitle: 'Organic Structuralism (Equalized Narrow Kerning)',
-      desc: "Founder's chosen direction: Load-bearing catenary arches replace harsh needle points. Kerning calibrated so distance across T-O, O-V, V-E, E-L, and L-U is completely, seamlessly equal (3.5px - 4.0px).",
+      subtitle: 'Organic Structuralism (Subtly Calibrated Kerning)',
+      desc: "Founder's chosen direction: Load-bearing catenary arches replace harsh needle points. Authentic glyph anatomy with subtle optical calibration: O-V and L-U spaces slightly narrowed while preserving identical proportions and original distances across all other letters.",
       blueprint: {
-        proportions: 'Compact Harmonic Organic Stance (158px total width)',
+        proportions: 'Architectural Organic Stance (194px width)',
         stroke: '3.0px Uniform Filleted Bio-Monoline',
         iconRatio: '1 : 1.15 (Arching resonance with 5-node branching nodes)',
-        uniqueLetterform: "Equalized gaps (T-O: 3.5px, O-V: 3.5px, V-E: 4px, E-L: 4px, L-U: 3.5px). Parabolic keel arch 'V'; swept heel 'L'; catenary suspension bowl 'U'.",
+        uniqueLetterform: "Original glyph shapes preserved; subtle optical adjustment on O-V (7.5px) and L-U (7.0px); V-E (10px) and E-L (10px) kept strictly identical.",
       },
     },
     {
