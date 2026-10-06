@@ -74,21 +74,21 @@ export function ArchitecturalWordmarkSVG({ concept = 'geodesic', height = 36, co
   }
 
   if (concept === 'biospheric') {
-    // 4. The Biospheric Arch: Organic structuralism, load-bearing catenary curves, 3.0px filleted
+    // 4. The Biospheric Arch: Organic structuralism with Calibrated Equalized Narrow Kerning
     return (
-      <svg height={height} viewBox="0 0 206 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TOVELU Biospheric Arch">
-        {/* T: Filleted gusset bracket transitions */}
-        <path d="M4 7.5H28 M16 7.5V36.5" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
-        {/* O: Bio-architectural smooth ring */}
-        <ellipse cx="46" cy="22" rx="15" ry="14.5" stroke={color} strokeWidth="3.0"/>
-        {/* V: Parabolic catenary keel arch */}
-        <path d="M72 7.5C75 22 81 36.5 85 36.5C89 36.5 95 22 98 7.5" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
-        {/* E: Swept organic cantilevers */}
-        <path d="M127 7.5H108V36.5H127 M108 22H123" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
-        {/* L: Swept internal transition curve */}
-        <path d="M137 7.5V33.5C137 35.5 138.5 36.5 141 36.5H157" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
-        {/* U: Catenary suspension bowl */}
-        <path d="M167 7.5V23C167 31 172.5 36.5 179.5 36.5C186.5 36.5 192 31 192 23V7.5" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
+      <svg height={height} viewBox="0 0 158 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TOVELU Biospheric Arch (Equalized Kerning)">
+        {/* T: 22px Lintel with Micro-Fillets */}
+        <path d="M4 7.5H26 M15 7.5V36.5" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
+        {/* O: Biospheric Arch Ring (Gap: 3.5px from T) */}
+        <circle cx="41.5" cy="22" r="14.5" stroke={color} strokeWidth="3.0"/>
+        {/* V: Parabolic Catenary Keel Arch (Gap: 3.5px from O) */}
+        <path d="M59.5 7.5C62.5 21 67.5 36.5 70.5 36.5C73.5 36.5 78.5 21 81.5 7.5" stroke={color} strokeWidth="3.0" strokeLinecap="round"/>
+        {/* E: Cantilever Beams (Gap: 4.0px from V) */}
+        <path d="M103.5 7.5H85.5V36.5H103.5 M85.5 22H99.5" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
+        {/* L: Swept Transition Heel (Gap: 4.0px from E) */}
+        <path d="M107.5 7.5V33.5C107.5 35.5 109 36.5 111.5 36.5H123.5" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
+        {/* U: Catenary Suspension Bowl (Gap: 3.5px from L foot) */}
+        <path d="M127 7.5V23C127 31 132 36.5 138 36.5C144 36.5 149 31 149 23V7.5" stroke={color} strokeWidth="3.0" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     );
   }
@@ -113,10 +113,22 @@ export function ArchitecturalWordmarkSVG({ concept = 'geodesic', height = 36, co
 }
 
 export function ArchitecturalWordmarkStudio() {
-  const [selectedConcept, setSelectedConcept] = useState('geodesic');
+  const [selectedConcept, setSelectedConcept] = useState('biospheric');
   const [lockupMode, setLockupMode] = useState('horizontal'); // 'standalone' | 'horizontal' | 'stacked'
 
   const concepts = [
+    {
+      id: 'biospheric',
+      name: '4. The Biospheric Arch (Chosen)',
+      subtitle: 'Organic Structuralism (Equalized Narrow Kerning)',
+      desc: "Founder's chosen direction: Load-bearing catenary arches replace harsh needle points. Kerning calibrated so distance across T-O, O-V, V-E, E-L, and L-U is completely, seamlessly equal (3.5px - 4.0px).",
+      blueprint: {
+        proportions: 'Compact Harmonic Organic Stance (158px total width)',
+        stroke: '3.0px Uniform Filleted Bio-Monoline',
+        iconRatio: '1 : 1.15 (Arching resonance with 5-node branching nodes)',
+        uniqueLetterform: "Equalized gaps (T-O: 3.5px, O-V: 3.5px, V-E: 4px, E-L: 4px, L-U: 3.5px). Parabolic keel arch 'V'; swept heel 'L'; catenary suspension bowl 'U'.",
+      },
+    },
     {
       id: 'geodesic',
       name: '1. The Geodesic Grid',
@@ -151,18 +163,6 @@ export function ArchitecturalWordmarkStudio() {
         stroke: '2.5px Pill/Capsule Monoline (Exact Icon Branch Weight)',
         iconRatio: '1 : 1.25 (Icon diameter 40px : Wordmark Cap 32px)',
         uniqueLetterform: "Capsule endcaps on all stems; pure concentric single ring 'O'; equator-aligned middle beam of 'E' at Y=22.",
-      },
-    },
-    {
-      id: 'biospheric',
-      name: '4. The Biospheric Arch',
-      subtitle: 'Organic Structuralism (Load-Bearing Curves)',
-      desc: "Fuses architectural engineering with biological load-bearing curves (inspired by Frei Otto and Eero Saarinen). Replaces rigid needle angles with parabolic catenary arches.",
-      blueprint: {
-        proportions: 'Swept Organic Architectural Width',
-        stroke: '3.0px Filleted Bio-Monoline',
-        iconRatio: '1 : 1.15 (Arching resonance with branching nodes)',
-        uniqueLetterform: "Parabolic catenary keel arch on 'V'; swept internal transition on 'L'; bio-architectural oval 'O'.",
       },
     },
     {
