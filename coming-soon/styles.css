@@ -1,0 +1,509 @@
+/**
+ * TOVELU Coming Soon — Constitutional Stylesheet
+ * 
+ * Calm Health Design System
+ * WCAG 2.2 AAA Compliance • Auto Dark/Light Mode • Zero Alarmist Aesthetics
+ */
+
+/* -------------------------------------------------------------
+   1. Design Tokens & Theme Variables
+   ------------------------------------------------------------- */
+:root {
+  /* Light Theme (Clinical Calm) */
+  --bg-page: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-sunken: #F1F5F9;
+  --border-subtle: #E2E8F0;
+  --border-prominent: #CBD5E1;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-tertiary: #64748B;
+  
+  --brand-teal: #08615A;
+  --brand-teal-hover: #05443E;
+  --brand-teal-light: #CCFBEE;
+  --brand-teal-text: #08615A;
+  --brand-accent: #14B8A6;
+
+  --success-bg: #ECFDF5;
+  --success-text: #065F46;
+  --success-border: #A7F3D0;
+
+  --error-bg: #FEF2F2;
+  --error-text: #991B1B;
+  --error-border: #FECACA;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 14px rgba(8, 97, 90, 0.08);
+
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* System Dark Theme Adaptation */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-page: #0B132B;
+    --bg-surface: #111C38;
+    --bg-surface-sunken: #080E21;
+    --border-subtle: #1E293B;
+    --border-prominent: #334155;
+    
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-tertiary: #64748B;
+    
+    --brand-teal: #14B8A6;
+    --brand-teal-hover: #5EEAD4;
+    --brand-teal-light: #042F2E;
+    --brand-teal-text: #5EEAD4;
+    --brand-accent: #5EEAD4;
+
+    --success-bg: #064E3B;
+    --success-text: #A7F3D0;
+    --success-border: #047857;
+
+    --error-bg: #450A0A;
+    --error-text: #FECACA;
+    --error-border: #991B1B;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* -------------------------------------------------------------
+   2. Base Reset & Typography
+   ------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Accessible Screen Reader Utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* -------------------------------------------------------------
+   3. Layout Structure
+   ------------------------------------------------------------- */
+.page-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justifyContent: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ambient Health Glow */
+.ambient-glow {
+  position: fixed;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 720px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.08) 0%, rgba(8, 97, 90, 0.02) 60%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* -------------------------------------------------------------
+   4. Header Navigation
+   ------------------------------------------------------------- */
+.site-header {
+  display: flex;
+  justifyContent: space-between;
+  align-items: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Canonical Standard Primary Lockup */
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px; /* Exactly 16px standard clear space */
+  color: var(--brand-teal);
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  color: var(--brand-teal);
+}
+
+.brand-wordmark {
+  height: 34px;
+  width: auto;
+  flex-shrink: 0;
+  color: var(--text-primary);
+}
+
+.header-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand-accent);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+/* -------------------------------------------------------------
+   5. Main Content Area
+   ------------------------------------------------------------- */
+.main-content {
+  padding: 4rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.75rem;
+}
+
+.badge-container {
+  display: flex;
+  justifyContent: center;
+}
+
+.constitutional-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-teal-light);
+  color: var(--brand-teal-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  max-width: 840px;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.1875rem);
+  color: var(--text-secondary);
+  max-width: 700px;
+  line-height: 1.65;
+}
+
+/* -------------------------------------------------------------
+   6. Waitlist Form
+   ------------------------------------------------------------- */
+.waitlist-section {
+  width: 100%;
+  max-width: 520px;
+  margin-top: 0.5rem;
+}
+
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.email-input {
+  flex: 1 1 280px;
+  min-height: 48px;
+  padding: 0 1rem;
+  border: 1px solid var(--border-prominent);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 0.9375rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: var(--brand-teal);
+  box-shadow: 0 0 0 3px rgba(8, 97, 90, 0.15);
+}
+
+.submit-button {
+  min-height: 48px;
+  padding: 0 1.5rem;
+  background-color: var(--brand-teal);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button:hover {
+  background-color: var(--brand-teal-hover);
+}
+
+.submit-button:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 2px;
+}
+
+.form-feedback {
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  display: none;
+}
+
+.form-feedback.success {
+  display: block;
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.form-feedback.error {
+  display: block;
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid var(--error-border);
+}
+
+.privacy-notice {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+}
+
+/* -------------------------------------------------------------
+   7. Principles Grid
+   ------------------------------------------------------------- */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.principle-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.principle-card:hover {
+  border-color: var(--border-prominent);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  font-size: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.card-body {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.card-meta {
+  font-size: 0.6875rem;
+  font-family: var(--font-mono);
+  color: var(--brand-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* -------------------------------------------------------------
+   8. Standards Compliance Bar
+   ------------------------------------------------------------- */
+.standards-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.standards-label {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}
+
+.standard-tag {
+  font-size: 0.6875rem;
+  font-family: var(--font-mono);
+  padding: 4px 8px;
+  background-color: var(--bg-surface-sunken);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+}
+
+/* -------------------------------------------------------------
+   9. Semantic Footer
+   ------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+}
+
+.footer-constitutional strong {
+  color: var(--text-secondary);
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-meta code {
+  font-family: var(--font-mono);
+  color: var(--brand-teal);
+  background-color: var(--bg-surface-sunken);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+/* -------------------------------------------------------------
+   10. High-Contrast Focus & Accessibility
+   ------------------------------------------------------------- */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--brand-teal);
+  outline-offset: 2px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .main-content {
+    padding: 2.5rem 0 2rem 0;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .email-input, .submit-button {
+    width: 100%;
+  }
+
+  .brand-lockup {
+    gap: 12px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-wordmark {
+    height: 28px;
+  }
+}
