@@ -4,8 +4,7 @@ import React from 'react';
  * ToveluWordmark - The Canonical Biospheric Arch Wordmark
  * 
  * Locked Brand Direction: Concept 4 - The Biospheric Arch
- * Mathematically calibrated stroke thickness: 2.0px
- * Exactly identical to the 2.0px stroke thickness of the canonical ToveluLogo icon branches and rings.
+ * Calibrated Stroke Weight: 2.8px Medium
  * 
  * Optical Kerning Calibration:
  * - T -> O: Preserved authentic spacing
@@ -17,7 +16,7 @@ import React from 'react';
 export function ToveluWordmark({
   height = 36,
   color = 'currentColor',
-  strokeWidth = 2.0, // Calibrated 1:1 with ToveluLogo 2.0px branch & ring thickness
+  strokeWidth = 2.8, // 2.8px Medium Weight
   className = '',
   ariaLabel = 'TOVELU - Global Digital Health Operating System',
   ...props
