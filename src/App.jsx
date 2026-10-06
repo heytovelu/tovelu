@@ -514,6 +514,64 @@ export function App() {
                 </div>
               </div>
             </div>
+
+            {/* Interoperability Topology Deep Dive */}
+            <div
+              style={{
+                borderTop: '1px solid var(--border-subtle)',
+                paddingTop: 'var(--space-5)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 'var(--space-3)',
+                backgroundColor: 'var(--bg-surface-sunken)',
+                borderRadius: 'var(--radius-md)',
+                padding: 'var(--space-4)',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
+                <span style={{ fontSize: '1.1rem' }}>🔗</span>
+                <h3 style={{ fontSize: 'var(--font-size-base)', fontWeight: 'var(--font-weight-bold)' }}>
+                  Why This Icon Symbolizes Universal Interoperability (Layer L5)
+                </h3>
+              </div>
+              <p style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                Healthcare has historically failed because systems are closed silos (Apple Health, Epic, Cerner). TOVELU replaces walled gardens with an <strong>open distributed health graph</strong>. The central ring anchors the individual human, while the 5 radiating cylindrical channels link directly to global open standards without vendor lock-in:
+              </p>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                  gap: 'var(--space-3)',
+                  marginTop: 'var(--space-2)',
+                }}
+              >
+                <div style={{ backgroundColor: 'var(--bg-surface-primary)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--color-brand-primary)' }}>1. TOP NODE</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)' }}>Hospital &amp; EHR Systems</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-tertiary)', fontFamily: 'var(--font-family-mono)' }}>HL7 FHIR R5 / SMART on FHIR</div>
+                </div>
+                <div style={{ backgroundColor: 'var(--bg-surface-primary)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--color-brand-primary)' }}>2. UPPER-RIGHT NODE</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)' }}>Ambient IoT &amp; Vitals</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-tertiary)', fontFamily: 'var(--font-family-mono)' }}>LOINC &amp; IEEE 11073 Devices</div>
+                </div>
+                <div style={{ backgroundColor: 'var(--bg-surface-primary)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--color-brand-primary)' }}>3. UPPER-LEFT NODE</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)' }}>Diagnostics &amp; Imaging</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-tertiary)', fontFamily: 'var(--font-family-mono)' }}>SNOMED CT &amp; DICOM</div>
+                </div>
+                <div style={{ backgroundColor: 'var(--bg-surface-primary)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--color-brand-primary)' }}>4. LOWER-RIGHT NODE</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)' }}>Genomics &amp; Omics</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-tertiary)', fontFamily: 'var(--font-family-mono)' }}>GA4GH Passports / VCF</div>
+                </div>
+                <div style={{ backgroundColor: 'var(--bg-surface-primary)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--color-brand-primary)' }}>5. LOWER-LEFT NODE</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)' }}>Global Care Circles</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-tertiary)', fontFamily: 'var(--font-family-mono)' }}>WHO IPS (Intl Patient Summary)</div>
+                </div>
+              </div>
+            </div>
           </section>
         )}
 
