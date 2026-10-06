@@ -85,8 +85,13 @@ export function App() {
               gap: 'var(--space-4)',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)' }}>
-              <ToveluLogo size={46} color="var(--color-brand-primary)" />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+              {/* Standard Primary Lockup: Clear Icon and Wordmark in the exact same line */}
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '16px' }}>
+                <ToveluLogo size={42} color="var(--color-brand-primary)" />
+                <ToveluWordmark height={36} color="var(--text-primary)" strokeWidth={wordmarkStroke} />
+              </div>
+
               <div>
                 <div
                   style={{
@@ -101,12 +106,7 @@ export function App() {
                     marginBottom: 'var(--space-1)',
                   }}
                 >
-                  <span>TOVELU</span>
-                  <span>•</span>
                   <span>GLOBAL DIGITAL HEALTH ECOSYSTEM</span>
-                </div>
-                <div style={{ marginTop: 'var(--space-1)', marginBottom: 'var(--space-2)' }}>
-                  <ToveluWordmark height={36} color="var(--text-primary)" strokeWidth={wordmarkStroke} />
                 </div>
                 <h1
                   style={{
