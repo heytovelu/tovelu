@@ -7,6 +7,7 @@ import { ConsentEngine } from './components/ConsentEngine';
 import { CalmAlert } from './components/CalmAlert';
 import { AuditLedger } from './components/AuditLedger';
 import { BiometricVisualizer } from './components/BiometricVisualizer';
+import { ToveluWordmark } from './components/ToveluWordmark';
 
 export function App() {
   const [theme, setTheme] = useState('light');
@@ -103,12 +104,16 @@ export function App() {
                   <span>•</span>
                   <span>GLOBAL DIGITAL HEALTH ECOSYSTEM</span>
                 </div>
+                <div style={{ marginTop: 'var(--space-1)', marginBottom: 'var(--space-2)' }}>
+                  <ToveluWordmark height={36} color="var(--text-primary)" />
+                </div>
                 <h1
                   style={{
-                    fontSize: 'var(--font-size-2xl)',
-                    fontWeight: 'var(--font-weight-bold)',
+                    fontSize: 'var(--font-size-xl)',
+                    fontWeight: 'var(--font-weight-semibold)',
                     lineHeight: 'var(--line-height-tight)',
-                    letterSpacing: '-0.02em',
+                    letterSpacing: '-0.01em',
+                    color: 'var(--text-secondary)',
                   }}
                 >
                   Universal Health OS &amp; UI/UX Design Kit
@@ -569,6 +574,142 @@ export function App() {
                   <div style={{ fontWeight: 'bold', fontSize: '11px', color: 'var(--color-brand-primary)' }}>5. LOWER-LEFT NODE</div>
                   <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)' }}>Global Care Circles</div>
                   <div style={{ fontSize: '11px', color: 'var(--text-tertiary)', fontFamily: 'var(--font-family-mono)' }}>WHO IPS (Intl Patient Summary)</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Integrated Logotype (Wordmark) Studio */}
+            <div
+              style={{
+                borderTop: '1px solid var(--border-subtle)',
+                paddingTop: 'var(--space-5)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 'var(--space-4)',
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 'var(--space-2)' }}>
+                <div>
+                  <div
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 'var(--space-2)',
+                      fontSize: 'var(--font-size-xs)',
+                      fontWeight: 'var(--font-weight-bold)',
+                      color: 'var(--color-brand-primary)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.06em',
+                    }}
+                  >
+                    <span>Typographic Architecture</span>
+                    <span>•</span>
+                    <span>Integrated Logotype</span>
+                  </div>
+                  <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-bold)', marginTop: '0.2rem' }}>
+                    Official TOVELU Wordmark (`ToveluWordmark`)
+                  </h3>
+                  <p style={{ fontSize: 'var(--font-size-sm)', color: 'var(--text-secondary)', marginTop: '0.1rem' }}>
+                    Seamless integration where 'O' is replaced by the official 5-node health graph. Engineered with +2.5% optical overshoot and calibrated kerning.
+                  </p>
+                </div>
+                <span
+                  style={{
+                    fontSize: 'var(--font-size-xs)',
+                    padding: '0.2rem 0.65rem',
+                    borderRadius: 'var(--radius-full)',
+                    backgroundColor: 'var(--health-calm-bg)',
+                    color: 'var(--health-calm-text)',
+                    border: '1px solid var(--health-calm-border)',
+                    fontWeight: 'var(--font-weight-semibold)',
+                  }}
+                >
+                  WCAG 2.2 AAA Contrast
+                </span>
+              </div>
+
+              {/* Wordmark Live Display & Size Multi-Scale Grid */}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                  gap: 'var(--space-4)',
+                }}
+              >
+                {/* Hero Size (56px) Light / Brand Surface */}
+                <div
+                  style={{
+                    backgroundColor: 'var(--bg-surface-sunken)',
+                    borderRadius: 'var(--radius-md)',
+                    border: '1px solid var(--border-subtle)',
+                    padding: 'var(--space-6)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 'var(--space-3)',
+                    textAlign: 'center',
+                  }}
+                >
+                  <ToveluWordmark height={52} color="var(--text-primary)" />
+                  <div style={{ fontSize: 'var(--font-size-xs)', color: 'var(--text-tertiary)' }}>
+                    Hero Display (52px height) • Adaptive <code>currentColor</code>
+                  </div>
+                </div>
+
+                {/* Inverted / Teal Brand Surface */}
+                <div
+                  style={{
+                    backgroundColor: '#08615A',
+                    borderRadius: 'var(--radius-md)',
+                    border: '1px solid #064e3b',
+                    padding: 'var(--space-6)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 'var(--space-3)',
+                    textAlign: 'center',
+                  }}
+                >
+                  <ToveluWordmark height={52} color="#ffffff" />
+                  <div style={{ fontSize: 'var(--font-size-xs)', color: '#ccfbee' }}>
+                    Signature Teal Canvas (#08615A) • 11.2:1 AAA Contrast
+                  </div>
+                </div>
+              </div>
+
+              {/* Typographic Blueprint Specifications */}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                  gap: 'var(--space-3)',
+                  paddingTop: 'var(--space-2)',
+                }}
+              >
+                <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>1. PRIMARY FONT PAIRING</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Geometric Sans (Inter SemiBold)</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Cap Height: 32px | Uniform stroke: 4.5px | Tracking: +0.02em</div>
+                </div>
+
+                <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>2. INTEGRATION OVERSHOOT</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>+2.5% Cap &amp; +2.5% Baseline</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Scale factor s=0.93075 | Height: 33.6px | Y: 7.2 to 40.8</div>
+                </div>
+
+                <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>3. CALIBRATED KERNING</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Tucked T-O &amp; Angled O-V</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>Icon tucks 1.5px under T arm; 6.2px gap to V diagonal</div>
+                </div>
+
+                <div style={{ backgroundColor: 'var(--bg-surface-sunken)', padding: 'var(--space-3)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <div style={{ fontSize: '11px', fontWeight: 'bold', color: 'var(--color-brand-primary)' }}>4. SINGLE ASSET EMBED</div>
+                  <div style={{ fontWeight: '600', fontSize: 'var(--font-size-xs)', marginTop: '2px' }}>Pure Vector SVG (178x48)</div>
+                  <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}><code>public/tovelu_wordmark.svg</code> • Zero font dependencies</div>
                 </div>
               </div>
             </div>
