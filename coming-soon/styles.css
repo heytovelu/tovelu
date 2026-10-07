@@ -250,11 +250,12 @@ body {
   color: var(--text-primary);
 }
 
-/* Theme Toggle Button (At Right Side Corner) */
+/* Theme Toggle Button (At Far Right Side Corner) */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto; /* Always pins to far right corner */
   width: 44px;
   height: 44px;
   border-radius: var(--radius-full);
@@ -495,21 +496,14 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 /* Mobile Responsiveness */
 @media (max-width: 640px) {
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
+    padding: 1.25rem 1.25rem;
+    flex-direction: row;
+    justifyContent: space-between;
+    align-items: center;
   }
 
   .main-content {
     padding: 2.5rem 0 2rem 0;
-  }
-
-  .form-group {
-    flex-direction: column;
-  }
-
-  .email-input, .submit-button {
-    width: 100%;
   }
 
   .brand-lockup {
