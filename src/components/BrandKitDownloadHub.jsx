@@ -167,20 +167,41 @@ export function BrandKitDownloadHub() {
       ],
     },
 
-    // 4. Vector Masters (SVG)
+    // 4. Vector Masters (SVG & Ultra-HD PNG)
     {
       id: 'svg-masters',
       category: 'svg',
       title: 'Master Vector SVGs (Resolution Independent)',
-      specs: 'Clean SVG Source Files',
-      desc: 'Pure, standalone SVG files with zero dependencies for print, billboards, web UI, and mobile applications.',
+      specs: 'Clean SVG Source Files + Ultra-HD Master PNGs',
+      desc: 'Pure, standalone vector masters with zero dependencies. Available in native SVG and ultra-crisp transparent PNG formats.',
       previewImg: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-lockup-horizontal-master.svg',
       isWide: true,
       downloads: [
+        { label: 'Icon (PNG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-icon-master.png', filename: 'tovelu-icon-master.png' },
         { label: 'Icon (SVG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-icon-master.svg', filename: 'tovelu-icon-master.svg' },
+        { label: 'Wordmark (PNG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-wordmark-master.png', filename: 'tovelu-wordmark-master.png' },
         { label: 'Wordmark (SVG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-wordmark-master.svg', filename: 'tovelu-wordmark-master.svg' },
+        { label: 'Horizontal Lockup (PNG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-lockup-horizontal-master.png', filename: 'tovelu-lockup-horizontal-master.png' },
         { label: 'Horizontal Lockup (SVG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-lockup-horizontal-master.svg', filename: 'tovelu-lockup-horizontal-master.svg' },
+        { label: 'Stacked Lockup (PNG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-lockup-stacked-master.png', filename: 'tovelu-lockup-stacked-master.png' },
         { label: 'Stacked Lockup (SVG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-lockup-stacked-master.svg', filename: 'tovelu-lockup-stacked-master.svg' },
+      ],
+    },
+
+    // 5. Master PNGs (Transparent Ultra-HD)
+    {
+      id: 'png-masters',
+      category: 'transparent',
+      title: 'Master Vectors in PNG Form (Ultra-HD)',
+      specs: '2048px to 4128px Transparent PNGs',
+      desc: 'Full-fidelity transparent PNG renders of all master vector assets for presentations, print, and digital media.',
+      previewImg: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-lockup-horizontal-master.png',
+      isWide: true,
+      downloads: [
+        { label: 'Icon Master (PNG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-icon-master.png', filename: 'tovelu-icon-master.png' },
+        { label: 'Wordmark Master (PNG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-wordmark-master.png', filename: 'tovelu-wordmark-master.png' },
+        { label: 'Horizontal Master (PNG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-lockup-horizontal-master.png', filename: 'tovelu-lockup-horizontal-master.png' },
+        { label: 'Stacked Master (PNG)', url: '/tovelu-brand-kit/07-vector-masters-svg/tovelu-lockup-stacked-master.png', filename: 'tovelu-lockup-stacked-master.png' },
       ],
     },
   ];

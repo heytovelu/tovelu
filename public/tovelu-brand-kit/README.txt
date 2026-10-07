@@ -38,11 +38,12 @@ FOLDER CONTENTS:
       Vertical stacked brand lockup.
 
 07-vector-masters-svg/
-    - tovelu-icon-master.svg
-    - tovelu-wordmark-master.svg
-    - tovelu-lockup-horizontal-master.svg
-    - tovelu-lockup-stacked-master.svg
-    Resolution-independent vector masters with zero dependencies.
+    - tovelu-icon-master.{svg, png} (2048x2048 Ultra-HD Master)
+    - tovelu-wordmark-master.{svg, png} (3880x880 Ultra-HD Master)
+    - tovelu-lockup-horizontal-master.{svg, png} (4128x768 Ultra-HD Master)
+    - tovelu-lockup-stacked-master.{svg, png} (2000x1300 Ultra-HD Master)
+    - Color variants: {-dark, -teal, -white}.png for each master.
+    Resolution-independent vector masters (SVG) and Ultra-HD Master PNGs.
 
 DESIGN LAWS:
 - Wordmark Stroke Weight: 2.8px Medium
