@@ -213,19 +213,12 @@ body {
    ------------------------------------------------------------- */
 .site-header {
   display: flex;
-  justifyContent: flex-start;
+  justifyContent: space-between;
   align-items: center;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid var(--border-subtle);
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-.header-left {
-  display: inline-flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
 }
 
 /* Canonical Standard Primary Lockup */
@@ -250,7 +243,7 @@ body {
   color: var(--text-primary);
 }
 
-/* Theme Toggle Button (At Left Side In Front of Logo) */
+/* Theme Toggle Button (At Right Side Corner) */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
