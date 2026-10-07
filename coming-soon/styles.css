@@ -182,12 +182,31 @@ body {
 /* -------------------------------------------------------------
    3. Layout Structure
    ------------------------------------------------------------- */
+.site-header {
+  width: 100%;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justifyContent: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--bg-page);
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1.25rem 1.25rem;
+  }
+}
+
 .page-wrapper {
   max-width: 1080px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem;
   width: 100%;
-  min-height: 100vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justifyContent: space-between;
@@ -208,25 +227,13 @@ body {
   z-index: 0;
 }
 
-/* -------------------------------------------------------------
-   4. Header Navigation
-   ------------------------------------------------------------- */
-.site-header {
-  display: flex;
-  justifyContent: space-between;
-  align-items: center;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid var(--border-subtle);
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
 /* Canonical Standard Primary Lockup */
 .brand-lockup {
   display: inline-flex;
   align-items: center;
   gap: 16px; /* Exactly 16px standard clear space */
   color: var(--brand-teal);
+  flex-shrink: 0;
 }
 
 .brand-icon {
